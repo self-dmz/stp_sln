@@ -26,7 +26,7 @@ class TestRegForm(unittest.TestCase):
         driver.get(link2)
         first_name = driver.find_element(By.XPATH, "//label[text()='First name*']/following-sibling::input")
         first_name.send_keys(next(genData()))
-        last_name = driver.find_element(By.XPATH, "//label[text()='Last name*']/following-sibling::input")
+        last_name = driver.find_element(By.XPATH, "//label[text()='Last name*']/pyinput")
         last_name.send_keys(next(genData()))
         email = driver.find_element(By.XPATH, "//label[text()='Email*']/following-sibling::input")
         email.send_keys(next(genData()))
