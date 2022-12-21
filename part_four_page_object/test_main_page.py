@@ -11,6 +11,13 @@ def test_guest_can_go_to_login_page(browser):
     time.sleep(3)
 
 
+def test_guest_should_see_login_link(browser):
+    link = "http://selenium1py.pythonanywhere.com/"
+    page = MainPage(browser, link)
+    page.open()
+    page.should_be_login_link()
+
+
 def test_add_to_basket_button(browser):
     link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
     browser.get(link)
