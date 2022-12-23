@@ -6,6 +6,15 @@ from .pages.main_page import MainPage
 from selenium.webdriver.common.by import By
 
 
+def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
+    link = "http://selenium1py.pythonanywhere.com"
+    page = MainPage(browser, link)
+    page.open()
+    is_basket_empty = page.basket_should_be_empty()
+    print('Empty basket ?', is_basket_empty)
+    assert is_basket_empty is not True, 'The basket contains a stuff, but it is to be empty'
+
+
 def test_guest_can_go_to_login_page(browser):
     link = "http://selenium1py.pythonanywhere.com/"
     #wl = 'http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209?promo=midsummer '

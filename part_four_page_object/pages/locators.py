@@ -1,8 +1,16 @@
 from selenium.webdriver.common.by import By
 
 
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    PROCEED_IN_BASKET_BTN = (By.CSS_SELECTOR, "a[class='btn btn-lg btn-primary btn-block']")
+    BASKET_LINK_LIST = (By.CSS_SELECTOR, 'a[class="btn btn-default"]')
+
+
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, '.alertinner')
 
 
 class LoginPageLocators():
@@ -16,8 +24,14 @@ class ProductPageLocators():
     BOOK_PRICE_ON_PAGE = (By.CSS_SELECTOR, '.product_main p')
     STRONG_LIST = (By.CSS_SELECTOR, 'strong')
     BASKET_LINK_LIST = (By.CSS_SELECTOR, 'a[class="btn btn-default"]')
-    # BOOK_TITLE_IN_BASKET = (By.CSS_SELECTOR, "div[class='col-sm-4'] a:nth-child(1)")
-    # BOOK_PRICE_IN_BASKET = (By.CSS_SELECTOR, "div[class='col-sm-1'] p[class='price_color align-right']")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, '.alertinner')
+
+
+class BasketPageLocators():
+    PROCEED_IN_BASKET_BTN = (By.CSS_SELECTOR, "a[class='btn btn-lg btn-primary btn-block']")
+
+
+
 
 
 
